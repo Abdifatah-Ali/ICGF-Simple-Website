@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Abolition Regular';
+    src: url('../fonts/abolition-regular-webfont.eot');
+    src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abolition-regular-webfont.woff') format('woff'),
+         url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+  }
+
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17px;
+    color: #fff;
+    background-color: #faebd7;
+    line-height: 1.6;
+    position: relative;
+    padding-bottom: 24px;
+    min-height: 100vh;  
+}
+
+h1 {
+    font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+    font-size: 90px;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3; 
+    text-shadow: 0 1px 1px rgba(0,0,0,.8);
+    text-align: center;
+    align-items: center;
+  }
+
+#main-header{
+    background-image: url('../img/main-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    padding-top: 170px;
+    letter-spacing: .065em;
+}
+
+#minni-p {
+    text-align: center;
+    color: 	white;
+    letter-spacing: .065em;
+    font-weight: 200;
+    padding-bottom: 10px;
+}
+
+.main-article {
+    width: 73%;
+    float: none;
+    margin: 5% auto; /*this gives footer and the last p space with margin 5%*/
+    margin-top: 4%;
+    color: #000;
+    font-size: 1em;
+    line-height: 1.5em; 
+    text-align: justify;
+    min-height: calc(100vh - 306.95px - 24px);
+}
+
+.services {
+    width: 73%;
+	float: none;
+    margin: 5% auto;  /*this gives footer and the last p space with margin 5%*/
+    color: #000;
+    font-size: 1em;
+    line-height: 1.5em; 
+    text-align: justify;
+}
+
+.main-article img {
+	float: right;
+    width: 40%;
+    margin: 0% 2% 2% 2%;
+    border-top: 5px solid #ffa949;
+    border-radius: 10px;
+}
+
+.main-article h2,
+.services h2 {
+    font-size: 28px;
+    font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+    margin-bottom: 2%;
+    font-weight: 500;
+}
+
+.lists{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+
+nav {
+    float: right;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 70px; /* makes the nav going down*/
+    padding-right: 20px;/* makes the nav going right alittle*/
+    position: relative;
+    letter-spacing: .065em;
+  }
+  
+  nav a {
+    color: white;
+    font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 0;
+  }
+  
+  nav a:hover {
+    color: orange;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+
+  footer {
+	text-align: center;
+    color: #000;
+    font-size: 15px;
+    padding: 0px;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/*  Media Queries  */
+
+@media (max-width: 1024px) {
+    .main-article {
+      width: 90%;
+    }
+
+    .services {
+        padding: 10% 12%;
+        margin: 50px 0 20px;
+      }
+  }
+  
+  @media (max-width: 768px) {
+    .main-article {
+        width: 100%;
+        padding: 20px;
+        border-top: none;
+    }
+  
+    .main-header{
+      max-height: 380;
+      padding: 50px 25px 0;
+    }
+
+    nav li {
+        display: inline-block;
+        font-size: 12px;
+        
+      }
+  
+    .lists {
+      font-size: 1rem;
+      border: none;
+      float: none;
+      width: 100%;
+    }
+  
+    h1,
+    h2 {
+      font-size:5rem;
+      line-height: 1.1;
+    }
+
+  .footer {
+      padding: 20px 0;
+    }
+  }
+  
